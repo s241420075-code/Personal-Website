@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2b2b2b;
+    background-color: #f5f1ea;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: #234d20;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b2b2b;
+    margin-left: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #355e3b;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #355e3b;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 85vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("Tasik 2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
+}
+
+.hero-text {
+    max-width: 650px;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #355e3b;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #234d20;
+}
+
+.intro {
+    padding: 80px 12%;
+    text-align: center;
+    background: #f5f1e8;
+}
+
+.intro-box {
+
+    background:
+    url("tasik\ 8.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 1000px;
+    margin: auto;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.intro h2 {
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.title-line {
+    width: 90px;
+    height: 4px;
+    background: #355e3b;
+    margin: 18px auto 25px;
+    border-radius: 50px;
+}
+
+.intro p {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.intro p1 {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+.mini-card-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.mini-card {
+    flex: 1;
+    background: #f5f1ea;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #d3c7b8;
+    transition: 0.4s ease;
+}
+
+.mini-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.mini-card h3 {
+    color: #355e3b;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.mini-card p {
+    font-size: 14px;
+}
+
+footer {
+    background:  #5aa169;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+footer h3 {
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media(max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero {
+        height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .mini-card-container {
+        flex-direction: column;
+    }
+
+    .intro-box {
+        padding: 35px;
+    }
+}
